@@ -7,225 +7,220 @@
 
 <style>
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
 }
 
 body{
-color:#1d1d1f;
-background:
-radial-gradient(circle at 20% 30%,#c7d2ff,transparent 40%),
-radial-gradient(circle at 80% 40%,#ffd6e7,transparent 40%),
-radial-gradient(circle at 50% 80%,#d0f0ff,transparent 40%),
-#f5f5f7;
-background-attachment:fixed;
-line-height:1.6;
+  color:#1d1d1f;
+  background:
+    radial-gradient(circle at 20% 30%,#c7d2ff,transparent 40%),
+    radial-gradient(circle at 80% 40%,#ffd6e7,transparent 40%),
+    radial-gradient(circle at 50% 80%,#d0f0ff,transparent 40%),
+    #f5f5f7;
+  background-attachment:fixed;
+  line-height:1.6;
 }
 
-/* 3D 背景 */
 #three-bg{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-z-index:-1;
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  z-index:-1;
 }
 
-/* NAVBAR */
+/* NAV */
 nav{
-position:fixed;
-top:0;
-width:100%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:18px 80px;
-background:rgba(255,255,255,0.6);
-backdrop-filter:blur(20px);
-transition:0.3s;
-z-index:1000;
+  position:fixed;
+  top:0;
+  width:100%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:18px 80px;
+  background:rgba(255,255,255,0.6);
+  backdrop-filter:blur(20px);
+  transition:0.3s;
+  z-index:1000;
 }
 nav a{
-margin-left:30px;
-text-decoration:none;
-color:#1d1d1f;
-font-weight:500;
+  margin-left:30px;
+  text-decoration:none;
+  color:#1d1d1f;
+  font-weight:500;
 }
 nav a.logo{
-font-size:22px;
-font-weight:700;
+  font-size:22px;
+  font-weight:700;
 }
 
 /* HERO */
 .hero{
-height:100vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-padding:20px;
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:20px;
 }
 .hero h1{
-font-size:80px;
-font-weight:700;
-letter-spacing:-1px;
+  font-size:80px;
+  font-weight:700;
+  letter-spacing:-1px;
 }
 .hero p{
-font-size:24px;
-color:#6e6e73;
-margin-top:10px;
-margin-bottom:30px;
+  font-size:24px;
+  color:#6e6e73;
+  margin-top:10px;
+  margin-bottom:30px;
 }
 .hero button{
-padding:16px 36px;
-border-radius:999px;
-border:none;
-font-size:16px;
-background:linear-gradient(135deg,#0071e3,#42a1ff);
-color:white;
-cursor:pointer;
-transition:0.4s;
-box-shadow:0 8px 20px rgba(0,113,227,0.3);
+  padding:16px 36px;
+  border-radius:999px;
+  border:none;
+  font-size:16px;
+  background:linear-gradient(135deg,#0071e3,#42a1ff);
+  color:white;
+  cursor:pointer;
+  transition:0.4s;
+  box-shadow:0 8px 20px rgba(0,113,227,0.3);
 }
 .hero button:hover{
-transform:scale(1.08);
+  transform:scale(1.08);
 }
 
 /* SECTIONS */
 section{
-padding:120px 80px;
-max-width:1200px;
-margin:auto;
+  padding:120px 80px;
+  max-width:1200px;
+  margin:auto;
 }
 section h2{
-font-size:36px;
-margin-bottom:40px;
+  font-size:36px;
+  margin-bottom:40px;
 }
 
 /* GRID */
 .grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:30px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:30px;
 }
 
 /* CARDS */
 .card{
-background:rgba(255,255,255,0.7);
-backdrop-filter:blur(20px);
-border-radius:24px;
-padding:30px;
-box-shadow:0 10px 30px rgba(0,0,0,0.1);
-transition:0.4s;
-overflow:hidden;
-position:relative;
+  background:rgba(255,255,255,0.7);
+  backdrop-filter:blur(20px);
+  border-radius:24px;
+  padding:30px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.1);
+  transition:0.4s;
+  overflow:hidden;
+  position:relative;
 }
 .card:hover{
-transform:translateY(-10px) scale(1.02);
+  transform:translateY(-10px) scale(1.02);
 }
 .project-img{
-width:100%;
-height:180px;
-border-radius:16px;
-margin-bottom:20px;
-background-size:cover;
-background-position:center;
-transition:0.5s;
+  width:100%;
+  height:180px;
+  border-radius:16px;
+  margin-bottom:20px;
+  background-size:cover;
+  background-position:center;
+  transition:0.5s;
 }
 .card:hover .project-img{
-transform:scale(1.08);
+  transform:scale(1.08);
 }
 .card a.button{
-display:inline-block;
-margin-top:12px;
-padding:10px 26px;
-border-radius:999px;
-background:linear-gradient(135deg,#0071e3,#42a1ff);
-color:white;
-text-decoration:none;
-font-weight:500;
-transition:0.3s;
+  display:inline-block;
+  margin-top:12px;
+  padding:10px 26px;
+  border-radius:999px;
+  background:linear-gradient(135deg,#0071e3,#42a1ff);
+  color:white;
+  text-decoration:none;
+  font-weight:500;
+  transition:0.3s;
 }
 .card a.button:hover{
-transform:scale(1.05);
+  transform:scale(1.05);
 }
-.project-link {
-  text-decoration: none;
-  color: inherit;
-  display: block;
-}
+
 /* CONTACT */
 .contact{
-text-align:center;
+  text-align:center;
 }
 .contact a{
-color:#0071e3;
-text-decoration:none;
-font-size:18px;
+  color:#0071e3;
+  text-decoration:none;
+  font-size:18px;
 }
 
 /* FOOTER */
 footer{
-text-align:center;
-padding:40px;
-color:#6e6e73;
+  text-align:center;
+  padding:40px;
+  color:#6e6e73;
 }
 
 /* FADE ANIMATION */
 .fade{
-opacity:0;
-transform:translateY(40px);
-transition:1s;
+  opacity:0;
+  transform:translateY(40px);
+  transition:1s;
 }
 .fade.show{
-opacity:1;
-transform:translateY(0);
+  opacity:1;
+  transform:translateY(0);
 }
 
 /* DARK MODE */
 body.dark{
-background:#000;
-color:#f5f5f7;
+  background:#000;
+  color:#f5f5f7;
 }
 body.dark nav{
-background:rgba(0,0,0,0.7);
+  background:rgba(0,0,0,0.7);
 }
 body.dark .card{
-background:rgba(30,30,30,0.8);
+  background:rgba(30,30,30,0.8);
 }
 body.dark a{
-color:#42a1ff;
+  color:#42a1ff;
 }
 
 /* THEME BUTTON */
 .theme-toggle{
-position:fixed;
-bottom:30px;
-right:30px;
-width:50px;
-height:50px;
-border-radius:50%;
-border:none;
-background:#1d1d1f;
-color:white;
-font-size:20px;
-cursor:pointer;
-box-shadow:0 5px 15px rgba(0,0,0,0.2);
+  position:fixed;
+  bottom:30px;
+  right:30px;
+  width:50px;
+  height:50px;
+  border-radius:50%;
+  border:none;
+  background:#1d1d1f;
+  color:white;
+  font-size:20px;
+  cursor:pointer;
+  box-shadow:0 5px 15px rgba(0,0,0,0.2);
 }
 
 /* SMOOTH SCROLL */
 html{
-scroll-behavior:smooth;
+  scroll-behavior:smooth;
 }
 
 .project-link{
-text-decoration:none;
-color:inherit;
-display:block;
+  text-decoration:none;
+  color:inherit;
+  display:block;
 }
 </style>
 </head>
@@ -266,31 +261,28 @@ display:block;
 
 <!-- PROJECTS -->
 <section id="projects" class="fade">
-  <h2>Projects</h2>
-  <div class="grid">
+<h2>Projects</h2>
+<div class="grid">
 
-    <!-- Project 1 -->
-    <a href="project1.html" class="project-link">
-      <div class="card">
-        <div class="project-img" style="background-image:url('https://images.unsplash.com/photo-1518770660439-4636190af475');"></div>
-        <h3>Portfolio Website</h3>
-        <p>Personal website built on GitHub Pages.</p>
-        <a class="button" href="https://github.com/">View Source</a>
-      </div>
-    </a>
+<!-- Project 1 -->
+<a href="project1.html" class="project-link">
+<div class="card">
+<div class="project-img" style="background-image:url('https://images.unsplash.com/photo-1518770660439-4636190af475');"></div>
+<h3>Portfolio Website</h3>
+<p>Personal website built on GitHub Pages.</p>
+<a class="button" href="https://github.com/">View Source</a>
+</div>
+</a>
 
-    <!-- Project 2 -->
-    <a href="project2.html" class="project-link">
-      <div class="card">
-        <div class="project-img" style="background-image:url('https://images.unsplash.com/photo-1504639725590-34d0984388bd');"></div>
-        <h3>Future Project</h3>
-        <p>More projects coming soon.</p>
-        <a class="button" href="https://github.com/">View Source</a>
-      </div>
-    </a>
-
-  </div>
-</section>
+<!-- Project 2 -->
+<a href="project2.html" class="project-link">
+<div class="card">
+<div class="project-img" style="background-image:url('https://images.unsplash.com/photo-1504639725590-34d0984388bd');"></div>
+<h3>Future Project</h3>
+<p>More projects coming soon.</p>
+<a class="button" href="https://github.com/">View Source</a>
+</div>
+</a>
 
 </div>
 </section>
