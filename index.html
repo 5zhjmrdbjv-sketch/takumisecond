@@ -58,7 +58,7 @@
 
         <section id="learning">
             <h2>Learning</h2>
-            <p>
+            <p class="currentlylearning">
                 Currently learning:
                 - HTML
                 - CSS
@@ -68,7 +68,7 @@
 
         <section id="hobby">
             <h2>Hobby</h2>
-            <p>
+            <p class="myhobby">
                 My hobby:
                 - Guitar
                 - Coffee
@@ -129,6 +129,16 @@
 
     main {
         padding: 20px;
+    }
+
+    .currentlylearning {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .myhobby {
+        display: flex;
+        flex-direction: column;
     }
 
     section {
